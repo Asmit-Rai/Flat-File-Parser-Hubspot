@@ -127,12 +127,12 @@ const syncWithHubSpot = async () => {
       headers: localHeaders.value,
       rows: localData.value,
     };
-    await fetch('https://flat-file-parser-hubspot.vercel.app/csv-data', {
+    await fetch('https://flat-file-parser-backend.onrender.com/csv-data', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
     });
-    const res = await fetch('https://flat-file-parser-hubspot.vercel.app/process-csv', { method: 'POST' });
+    const res = await fetch('https://flat-file-parser-backend.onrender.com/process-csv', { method: 'POST' });
     const result = await res.json();
 
     if (result.success) {

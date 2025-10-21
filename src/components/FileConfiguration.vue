@@ -143,7 +143,7 @@ const submitFile = async () => {
   formData.append("delimiter", delimiterMap[config.delimiterType]);
 
   try {
-    const response = await fetch("https://flat-file-parser-hubspot.vercel.app/api/uploads", {
+    const response = await fetch("https://flat-file-parser-backend.onrender.com/api/uploads", {
       method: "POST",
       body: formData,
     });

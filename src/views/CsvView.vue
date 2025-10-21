@@ -6,7 +6,7 @@ const data = ref('');
 
 onMounted(async () => {
   try {
-    const response = await fetch('https://flat-file-parser-hubspot.vercel.app/get-csv-data');
+    const response = await fetch('https://flat-file-parser-backend.onrender.com/get-csv-data');
     const csvParseData = await response.json();
     
     if (csvParseData.csvData && typeof csvParseData.csvData === 'string') {
