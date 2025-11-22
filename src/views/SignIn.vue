@@ -66,7 +66,7 @@ async function userData(e) {
         <input
           v-model="password"
           type="password"
-          placeholder="******"
+          placeholder="1234"
           name="password"
           required
         />
